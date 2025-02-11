@@ -68,8 +68,8 @@ The `data/` directory is intended to store the QM9 dataset. The notebook code as
     ```
 2.  **Install Dependencies:** Ensure you have the required libraries installed. You can use `mamba` or `pip` as indicated in the notebooks.  A typical installation command might look like:
     ```bash
-    !mamba install -q -y -c pyg pyg
-    !pip install numpy pandas matplotlib torch_geometric tqdm scikit-learn py3Dmol rdkit
+    %mamba install -q -y -c pyg pyg
+    %pip install numpy pandas matplotlib torch_geometric tqdm scikit-learn py3Dmol rdkit
     ```
     Run this command within a notebook cell.
 3.  **Run the Notebooks:** Open and run the notebooks sequentially:
