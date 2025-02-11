@@ -2,20 +2,6 @@
 
 This repository contains code and notebooks for a project focused on predicting molecular properties, specifically the dipole moment, using Graph Neural Networks (GNNs) on the QM9 dataset.
 
-## File Tree
-Use code with caution.
-Markdown
-GRAPH_NEURAL_NETWORKS/
-├── data/ # Directory for QM9 dataset (downloaded or processed)
-├── .gitignore # Git ignore file
-├── dataset_EDA.ipynb # Notebook for Exploratory Data Analysis of the QM9 dataset
-├── dataset_exploring.ipynb # Notebook for earlier sketch dataset exploration and visualization
-├── GAT_model.pt # Saved weights for the trained GAT model
-├── GCN_model.pt # Saved weights for the trained GCN model
-├── GIN_model.pt # Saved weights for the trained GIN model
-├── GraphTransformer_model.pt # Saved weights for the trained GraphTransformer model
-├── notebook.ipynb # Notebook used for model training experiments or earlier training code 
-└── training.ipynb # Main notebook for training and evaluating GNN models
 
 ## Project Overview
 
@@ -66,7 +52,7 @@ The `data/` directory is intended to store the QM9 dataset. The notebook code as
 
 ## Findings
 
-*   **GraphTransformer Outperforms Others:** The GraphTransformer Network achieved the lowest test Mean Squared Error (MSE) loss for dipole moment prediction, demonstrating superior performance compared to GCN, GIN, and GAT in this experiment.
+*   **GraphTransformer Outperforms Others:** The GraphTransformer Network achieved the lowest test Mean Squared Error (MSE) loss for dipole moment prediction, demonstrating the **importance of edge attributes as features** for superior performance compared to GCN, GIN, and GAT in this experiment.
 *   **Attention Mechanisms are Beneficial:** GAT also showed strong performance, highlighting the effectiveness of attention mechanisms in capturing relevant molecular features for property prediction.
 *   **GIN Instability:** The GIN model exhibited training instability and poorer generalization performance compared to other architectures, suggesting it might not be as well-suited for this specific task or require further hyperparameter tuning.
 *   **Computational Trade-off:**  More complex, attention-based models (GAT and GraphTransformer) generally required longer training times than simpler models (GCN, GIN), indicating a trade-off between model complexity/performance and computational cost.
